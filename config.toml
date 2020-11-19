@@ -1,13 +1,13 @@
-baseURL = "https://shaojin.me" # <head> 里面的 baseurl 信息，填你的博客地址
+baseURL = "https://shaojin.me"
 title = "Manning`s Life" # 浏览器的标题
 languageCode = "zh-cn" # 语言
 hasCJKLanguage = true # 开启可以让「字数统计」统计汉字
-theme = "LeaveIt" # 主题 (需要自己下载)
+theme = "mogege" # 主题 (需要自己下载)
 
 paginate = 11 # 每页的文章数
 enableEmoji = true # 支持 Emoji
 enableRobotsTXT = true # 支持 robots.txt
-googleAnalytics = "" # Google 统计 id
+
 
 preserveTaxonomyNames = true
 
@@ -17,7 +17,7 @@ preserveTaxonomyNames = true
   noreferrerLinks = true
 
 [Permalinks]
- posts = "/:year/:filename/"
+  posts = "/:year/:filename/"
 
 [menu]
   [[menu.main]]
@@ -45,23 +45,20 @@ preserveTaxonomyNames = true
     author = "Manning"                          # Author's name
     avatar = "avatar.png"           # Author's avatar
     subtitle = "Manning`s Life"                  # Subtitle
-    cdn_url = ""           # Base CDN URL
     home_mode = "" # post or other
     enableGitalk = true # gitalk 评论系统
 
     google_verification = ""
 
-    description = "" # (Meta) 描述
+    description = "Manning的个人博客" # (Meta) 描述
     keywords = "" # site keywords
 
     beian = ""
     baiduAnalytics = ""
+    googleAnalytics = "UA-104502658-2" # Google 统计 id
 
     license= '本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可'
 
-[params.social]
-    Twitter = "pidog"
-    
 [params.gitalk] # Github: https://github.com/gitalk/gitalk
     clientID = "3c1c3020ed16749f217b" # Your client ID
     clientSecret = "1f348b31b71804f690ff205ded8b14a4793ec2fb" # Your client secret
@@ -72,5 +69,5 @@ preserveTaxonomyNames = true
     labels= "gitalk" # Github issue labels. If you used to use Gitment, you can change it
     perPage= 15 # Pagination size, with maximum 100.
     pagerDirection= "last" # Comment sorting direction, available values are 'last' and 'first'.
-    createIssueManually= false # If it is 'false', it is auto to make a Github issue when the administrators login.
+    createIssueManually= true # If it is 'false', it is auto to make a Github issue when the administrators login.
     distractionFreeMode= false # Enable hot key (cmd|ctrl + enter) submit comment.
