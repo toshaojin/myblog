@@ -45,7 +45,7 @@ jobs:
         git init && git add .
         for try in $(seq 10); do
           git commit -m "Build By GitHub Actions on $(date "+%Y-%m-%d %T")"
-          if git push -f "${{ secrets.ACTIONS_DEPLOY_KEY }}@${GH_REPO}" master:${GH_BRANCH}; then
+          if git push -f "https://${{ secrets.ACTIONS_DEPLOY_KEY }}@${GH_REPO}" master:${GH_BRANCH}; then
             exit 0
           else
             sleep $(shuf -i 3-10 -n 1)
