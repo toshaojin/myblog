@@ -1,54 +1,32 @@
 name: Manning`s Blog
-on: push
-
-env:
-  GH_USERNAME: toshaojin
-  GH_EMAIL: toshaojin@gmail.com
-  GH_REPO: github.com/toshaojin/toshaojin.github.io
-  GH_BRANCH: master
+on:
+  push:
+    branches:
+    # 你的hugo源码分支
+    - master
 
 jobs:
-  build:
+  build-deploy:
     runs-on: ubuntu-18.04
     steps:
-    - name: Checkout
-      uses: actions/checkout@master
-      with:
-          submodules: true
-          fetch-depth: 1
-    - name: Build site
-      uses: jakejarvis/hugo-build-action@master
-      with:
-        args: --minify
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: site
-        path: public
+    - uses: actions/checkout@v1
+      # 如果使用了git submodules
+      # with:
+      #   submodules: true
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    container:
-      image: alpine/git
-    steps:
-    - name: Download Artifact
-      uses: actions/download-artifact@v2
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
       with:
-        name: site
-    - name: Setup git
-      run: |
-        git config --global user.name "${GH_USERNAME}"
-        git config --global user.email "${GH_EMAIL}"
-    - name: Deploy to GitHub
-      run: |
-        git init && git add .
-        for try in $(seq 10); do
-          git commit -m "Build By GitHub Actions on $(date "+%Y-%m-%d %T")"
-          if git push -f "https://${{ secrets.ACTIONS_DEPLOY_KEY }}@${GH_REPO}" master:${GH_BRANCH}; then
-            exit 0
-          else
-            sleep $(shuf -i 3-10 -n 1)
-          fi
-        done
-        exit 1
+        hugo-version: '0.78.2'
+        # extended: true
+
+    - name: Build
+      run: hugo --minify
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v2.5.0
+      env:
+        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY}}
+        # 你的github page分支
+        PUBLISH_BRANCH: master
+        PUBLISH_DIR: ./public
