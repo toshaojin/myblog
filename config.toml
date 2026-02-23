@@ -1,4 +1,4 @@
-baseURL = "https://shaojin.me"
+baseURL = "https://toshaojin.github.io"
 title = "Manning`s Life" # 浏览器的标题
 languageCode = "zh-cn" # 语言
 hasCJKLanguage = true # 开启可以让「字数统计」统计汉字
