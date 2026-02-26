@@ -1,12 +1,9 @@
 ---
 title: '合作'
-date: 2016-04-20 02:32:00
+date: 2016-04-20
 tags: [“kid”]
-published: true
-hideInList: false
-feature: 
-isTop: false
-categories: ["娃儿"]
+draft: false
+categories: ["生活儿"]
 ---
 
 

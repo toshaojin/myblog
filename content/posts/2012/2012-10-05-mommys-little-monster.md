@@ -1,12 +1,9 @@
 ---
 title: 'monster'
-date: 2012-10-05 02:32:00
+date: 2012-10-05
 tags: [“kid”]
-categories: ["娃儿"]
-published: true
-hideInList: false
-feature: 
-isTop: false
+draft: false
+categories: ["生活儿"]
 ---
 
 

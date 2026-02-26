@@ -1,6 +1,6 @@
 ---
 title: '再一次尝试博客'
-date: 2020-03-11 20:40:00
+date: 2020-03-11
 tags: [博客,Github page,Gridea]
 published: true
 hideInList: false
@@ -63,7 +63,6 @@ isTop: false  //是否置顶
 # 能坚持多久？
 
 鬼知道能坚持多久!说不定搞定这些东西，发现学到了什么，而写文章从来不是什么重点，第二天就束之高阁。
-
 
 
 

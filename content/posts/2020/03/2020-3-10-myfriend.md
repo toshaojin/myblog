@@ -1,6 +1,6 @@
 ---
 title: '朋友'
-date: 2020-03-10 20:50:00
+date: 2020-03-10
 tags: [kids,朋友,friend,son,作文]
 published: true
 hideInList: false
@@ -22,7 +22,6 @@ categories: ["娃儿"]
 不论弟弟能不能跑过我，他永远都是我的好朋友。
 
 By Son
-
 
 
 

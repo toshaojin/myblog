@@ -1,6 +1,6 @@
 ---
 title: '我的爷爷'
-date: 2020-03-21 20:50:00
+date: 2020-03-21
 tags: [son,kid,作文]
 published: true
 hideInList: false
@@ -21,7 +21,6 @@ categories: ["娃儿"]
 我爱我的爷爷，我也要帮爷爷做力所能及的事情。
 
 By Son
-
 
 
 
