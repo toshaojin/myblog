@@ -17,7 +17,7 @@ preserveTaxonomyNames = true
   noreferrerLinks = true
 
 [Permalinks]
-  posts = "/posts/:year/:month/:filename/"
+  posts = "/posts/:year/:month/:contentbasename/"
 
 [menu]
   [[menu.main]]
@@ -40,9 +40,13 @@ preserveTaxonomyNames = true
     url = "/about/"
     weight = 4
 
+[params.author]
+  name  = "Manning字"
+  email = ""
+  link  = ""
+
 [params]
     since = 2011
-    author = "Manning"                          # Author's name
     avatar = "avatar.png"           # Author's avatar
     subtitle = "Manning`s Life"                  # Subtitle
     home_mode = "" # post or other
@@ -71,3 +75,8 @@ preserveTaxonomyNames = true
     pagerDirection= "last" # Comment sorting direction, available values are 'last' and 'first'.
     createIssueManually= true # If it is 'false', it is auto to make a Github issue when the administrators login.
     distractionFreeMode= false # Enable hot key (cmd|ctrl + enter) submit comment.
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
