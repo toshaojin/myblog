@@ -2,13 +2,12 @@ baseURL = "https://toshaojin.github.io"
 title = "Manning`s Life" # 浏览器的标题
 languageCode = "zh-cn" # 语言
 hasCJKLanguage = true # 开启可以让「字数统计」统计汉字
-theme = "mogege" # 主题 (需要自己下载)
+theme = "LoveIt" # 主题 (需要自己下载)
 
 paginate = 11 # 每页的文章数
 enableEmoji = true # 支持 Emoji
 enableRobotsTXT = true # 支持 robots.txt
 
-disqusShortname = ""
 
 preserveTaxonomyNames = true
 
