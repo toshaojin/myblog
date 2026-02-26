@@ -1,11 +1,8 @@
 ---
 title: '朋友'
 date: 2020-03-10
-tags: [kids,朋友,friend,son,作文]
-published: true
-hideInList: false
-feature: 
-isTop: false
+tags: []
+draft: false
 categories: ["娃儿"]
 ---
 

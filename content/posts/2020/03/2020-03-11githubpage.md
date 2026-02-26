@@ -1,11 +1,8 @@
 ---
 title: '再一次尝试博客'
 date: 2020-03-11
-tags: [博客,Github page,Gridea]
-published: true
-hideInList: false
-feature: https://i.loli.net/2020/03/12/X5Eb9qTxsCMo8tf.png
-isTop: false
+tags: []
+draft: false
 categories: ["技术活儿"]
 ---
 <!-- more -->

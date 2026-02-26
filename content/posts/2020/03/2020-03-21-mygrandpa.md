@@ -1,11 +1,9 @@
 ---
 title: '我的爷爷'
 date: 2020-03-21
-tags: [son,kid,作文]
-published: true
-hideInList: false
-feature: 
-isTop: false
+tags: []
+draft: false
+
 categories: ["娃儿"]
 ---
 我的爷爷个子不高，但身材很匀称，脸膛晒得黑黑的。爷爷的话不多，但每天都可以看到他忙碌的身影。
