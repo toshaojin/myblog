@@ -1,19 +1,35 @@
-name: Manning`s Blog
+name: Deploy Hugo site
+
 on:
   push:
     branches:
-    - master
+      - master   # 你源仓库的默认分支是 master
 
 jobs:
-  build:
-    runs-on: ubuntu-18.04
+  build-deploy:
+    runs-on: ubuntu-latest
 
     steps:
-    - name: 'Building...'
-      uses: reuixiy/hugo-deploy@v1
-      env:
-        DEPLOY_REPO: toshaojin/toshaojin.github.io
-        DEPLOY_BRANCH: master
-        DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
-        # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-        TZ: Asia/Shanghai
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          submodules: true       # 如果主题是 git submodule，保持为 true
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest' # 或固定版本，如 '0.124.1'
+          extended: true
+
+      - name: Build
+        run: hugo --minify       # 默认输出到 ./public
+
+      - name: Deploy to GitHub Pages repo
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          external_repository: toshaojin/toshaojin.github.io
+          publish_branch: master      # 目标仓库分支也是 master
+          publish_dir: ./public
+          commit_message: ${{ github.event.head_commit.message }}
