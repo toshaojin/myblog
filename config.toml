@@ -8,6 +8,7 @@ paginate = 11 # 每页的文章数
 enableEmoji = true # 支持 Emoji
 enableRobotsTXT = true # 支持 robots.txt
 
+disqusShortname = ""
 
 preserveTaxonomyNames = true
 
