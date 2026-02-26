@@ -2,7 +2,3 @@
 	path = themes/mogege
 	url = https://github.com/toshaojin/mogege
 
-
-[submodule "themes/LoveIt"]
-	path = themes/LoveIt
-	url = https://github.com/dillonzq/LoveIt.git
